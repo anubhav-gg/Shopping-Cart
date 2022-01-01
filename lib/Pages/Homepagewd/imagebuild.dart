@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:test_/Mythems/thems.dart';
+import 'package:velocity_x/src/extensions/context_ext.dart';
+import 'package:velocity_x/src/flutter/container.dart';
+import 'package:velocity_x/src/flutter/padding.dart';
+import 'package:velocity_x/src/flutter/sizedbox.dart';
+
+class ImageBuild extends StatelessWidget {
+  final String image;
+
+  const ImageBuild({Key? key, required this.image}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Image.network(
+      image,
+    ).box.rounded.p8.color(context.canvasColor).make().p16().w40(context);
+  }
+}
